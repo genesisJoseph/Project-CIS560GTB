@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace FarmForm
 {
-    public partial class ChickenGroupForm : Form
+    public partial class BirdGroupForm : Form
     {
 
         SqlConnection connect = new SqlConnection(
             ConfigurationManager.ConnectionStrings["FarmDB"].ConnectionString);
 
-        public ChickenGroupForm()
+        public BirdGroupForm()
         {
             InitializeComponent();
         }
@@ -41,10 +41,10 @@ namespace FarmForm
 
         private void ClearFields()
         {
-            txtCGroupID.Clear();
+            txtBGroupID.Clear();
             txtConfinement.Clear();
             txtCFarmID.Clear();
-            txtCGBreedID.Clear();
+            txtBGBreedID.Clear();
 
             txtConfinement.Focus();
         }
@@ -56,7 +56,7 @@ namespace FarmForm
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            if (txtConfinement.Text == "" || txtCFarmID.Text == "" || txtCGBreedID.Text == "")
+            if (txtConfinement.Text == "" || txtCFarmID.Text == "" || txtBGBreedID.Text == "")
             {
                 MessageBox.Show("Please fill in all fields.");
                 return;
@@ -79,7 +79,7 @@ namespace FarmForm
 
             SqlCommand checkBreed = new SqlCommand(
                 "SELECT COUNT(*) FROM ChickenBreed WHERE ChickenBreedID = @ChickenBreedID", connect);
-            checkBreed.Parameters.AddWithValue("@ChickenBreedID", txtCGBreedID.Text);
+            checkBreed.Parameters.AddWithValue("@ChickenBreedID", txtBGBreedID.Text);
 
             int breedExists = (int)checkBreed.ExecuteScalar();
 
@@ -95,7 +95,7 @@ namespace FarmForm
 
             cmd.Parameters.AddWithValue("@Confinement", txtConfinement.Text);
             cmd.Parameters.AddWithValue("@FarmID", txtCFarmID.Text);
-            cmd.Parameters.AddWithValue("@ChickenBreedID", txtCGBreedID.Text);
+            cmd.Parameters.AddWithValue("@ChickenBreedID", txtBGBreedID.Text);
 
             cmd.ExecuteNonQuery();
             connect.Close();
@@ -108,13 +108,13 @@ namespace FarmForm
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
-            if (txtCGroupID.Text == "")
+            if (txtBGroupID.Text == "")
             {
                 MessageBox.Show("Please select a chicken group to update.");
                 return;
             }
 
-            if (txtConfinement.Text == "" || txtCFarmID.Text == "" || txtCGBreedID.Text == "")
+            if (txtConfinement.Text == "" || txtCFarmID.Text == "" || txtBGBreedID.Text == "")
             {
                 MessageBox.Show("Please fill in all fields.");
                 return;
@@ -125,10 +125,10 @@ namespace FarmForm
             SqlCommand cmd = new SqlCommand(
                 "UPDATE ChickenGroup SET Confinement = @Confinement, FarmID = @FarmID, ChickenBreedID = @ChickenBreedID WHERE ChickenGroupID = @ChickenGroupID", connect);
 
-            cmd.Parameters.AddWithValue("@ChickenGroupID", txtCGroupID.Text);
+            cmd.Parameters.AddWithValue("@ChickenGroupID", txtBGroupID.Text);
             cmd.Parameters.AddWithValue("@Confinement", txtConfinement.Text);
             cmd.Parameters.AddWithValue("@FarmID", txtCFarmID.Text);
-            cmd.Parameters.AddWithValue("@ChickenBreedID", txtCGBreedID.Text);
+            cmd.Parameters.AddWithValue("@ChickenBreedID", txtBGBreedID.Text);
 
             cmd.ExecuteNonQuery();
             connect.Close();
@@ -141,7 +141,7 @@ namespace FarmForm
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            if (txtCGroupID.Text == "")
+            if (txtBGroupID.Text == "")
             {
                 MessageBox.Show("Please select a chicken group to delete.");
                 return;
@@ -163,7 +163,7 @@ namespace FarmForm
             SqlCommand cmd = new SqlCommand(
                 "DELETE FROM ChickenGroup WHERE ChickenGroupID = @ChickenGroupID", connect);
 
-            cmd.Parameters.AddWithValue("@ChickenGroupID", txtCGroupID.Text);
+            cmd.Parameters.AddWithValue("@ChickenGroupID", txtBGroupID.Text);
 
             cmd.ExecuteNonQuery();
             connect.Close();

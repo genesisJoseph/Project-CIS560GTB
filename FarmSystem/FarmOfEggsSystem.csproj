@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChickenGroupForm.cs">
+    <Compile Include="BirdGroupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChickenGroupForm.Designer.cs">
-      <DependentUpon>ChickenGroupForm.cs</DependentUpon>
+    <Compile Include="BirdGroupForm.Designer.cs">
+      <DependentUpon>BirdGroupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FarmForm.cs">
       <SubType>Form</SubType>
@@ -59,22 +59,31 @@
     <Compile Include="FarmForm.Designer.cs">
       <DependentUpon>FarmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChickenBreedForm.cs">
+    <Compile Include="BirdBreedForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChickenBreedForm.Designer.cs">
-      <DependentUpon>ChickenBreedForm.cs</DependentUpon>
+    <Compile Include="BirdBreedForm.Designer.cs">
+      <DependentUpon>BirdBreedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FarmOfEggsSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FarmOfEggsSystem.Designer.cs">
+      <DependentUpon>FarmOfEggsSystem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ChickenBreedForm.resx">
-      <DependentUpon>ChickenBreedForm.cs</DependentUpon>
+    <EmbeddedResource Include="BirdBreedForm.resx">
+      <DependentUpon>BirdBreedForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChickenGroupForm.resx">
-      <DependentUpon>ChickenGroupForm.cs</DependentUpon>
+    <EmbeddedResource Include="BirdGroupForm.resx">
+      <DependentUpon>BirdGroupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FarmForm.resx">
       <DependentUpon>FarmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FarmOfEggsSystem.resx">
+      <DependentUpon>FarmOfEggsSystem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,6 +1,6 @@
 ﻿namespace FarmForm
 {
-    partial class ChickenBreedForm
+    partial class BirdBreedForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,8 +35,8 @@
             this.btUpdate = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
             this.txtSpecies = new System.Windows.Forms.TextBox();
-            this.txtCName = new System.Windows.Forms.TextBox();
-            this.txtCBreedID = new System.Windows.Forms.TextBox();
+            this.txtBName = new System.Windows.Forms.TextBox();
+            this.txtBBreedID = new System.Windows.Forms.TextBox();
             this.uxSpecies = new System.Windows.Forms.Label();
             this.uxChickenBreedID = new System.Windows.Forms.Label();
             this.uxBName = new System.Windows.Forms.Label();
@@ -116,23 +116,23 @@
             this.txtSpecies.Size = new System.Drawing.Size(100, 20);
             this.txtSpecies.TabIndex = 25;
             // 
-            // txtCName
+            // txtBName
             // 
-            this.txtCName.Location = new System.Drawing.Point(258, 191);
-            this.txtCName.Multiline = true;
-            this.txtCName.Name = "txtCName";
-            this.txtCName.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtCName.Size = new System.Drawing.Size(100, 20);
-            this.txtCName.TabIndex = 24;
+            this.txtBName.Location = new System.Drawing.Point(258, 191);
+            this.txtBName.Multiline = true;
+            this.txtBName.Name = "txtBName";
+            this.txtBName.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtBName.Size = new System.Drawing.Size(100, 20);
+            this.txtBName.TabIndex = 24;
             // 
-            // txtCBreedID
+            // txtBBreedID
             // 
-            this.txtCBreedID.Location = new System.Drawing.Point(258, 128);
-            this.txtCBreedID.Multiline = true;
-            this.txtCBreedID.Name = "txtCBreedID";
-            this.txtCBreedID.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtCBreedID.Size = new System.Drawing.Size(100, 20);
-            this.txtCBreedID.TabIndex = 23;
+            this.txtBBreedID.Location = new System.Drawing.Point(258, 128);
+            this.txtBBreedID.Multiline = true;
+            this.txtBBreedID.Name = "txtBBreedID";
+            this.txtBBreedID.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtBBreedID.Size = new System.Drawing.Size(100, 20);
+            this.txtBBreedID.TabIndex = 23;
             // 
             // uxSpecies
             // 
@@ -153,7 +153,7 @@
             this.uxChickenBreedID.Name = "uxChickenBreedID";
             this.uxChickenBreedID.Size = new System.Drawing.Size(186, 24);
             this.uxChickenBreedID.TabIndex = 19;
-            this.uxChickenBreedID.Text = "ChickenBreedID";
+            this.uxChickenBreedID.Text = "BirdBreedID";
             this.uxChickenBreedID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // uxBName
@@ -175,10 +175,10 @@
             this.uxBreedMg.Name = "uxBreedMg";
             this.uxBreedMg.Size = new System.Drawing.Size(186, 24);
             this.uxBreedMg.TabIndex = 17;
-            this.uxBreedMg.Text = "Chicken Breed Management";
+            this.uxBreedMg.Text = "Bird Breed Management";
             this.uxBreedMg.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ChickenBreedForm
+            // BirdBreedForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,13 +190,13 @@
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.txtSpecies);
-            this.Controls.Add(this.txtCName);
-            this.Controls.Add(this.txtCBreedID);
+            this.Controls.Add(this.txtBName);
+            this.Controls.Add(this.txtBBreedID);
             this.Controls.Add(this.uxSpecies);
             this.Controls.Add(this.uxChickenBreedID);
             this.Controls.Add(this.uxBName);
             this.Controls.Add(this.uxBreedMg);
-            this.Name = "ChickenBreedForm";
+            this.Name = "BirdBreedForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvChickenBreed)).EndInit();
             this.ResumeLayout(false);
@@ -213,8 +213,8 @@
         private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.TextBox txtSpecies;
-        private System.Windows.Forms.TextBox txtCName;
-        private System.Windows.Forms.TextBox txtCBreedID;
+        private System.Windows.Forms.TextBox txtBName;
+        private System.Windows.Forms.TextBox txtBBreedID;
         private System.Windows.Forms.Label uxSpecies;
         private System.Windows.Forms.Label uxChickenBreedID;
         private System.Windows.Forms.Label uxBName;

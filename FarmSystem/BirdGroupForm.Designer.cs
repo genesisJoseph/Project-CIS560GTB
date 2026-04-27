@@ -1,6 +1,6 @@
 ﻿namespace FarmForm
 {
-    partial class ChickenGroupForm
+    partial class BirdGroupForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,24 +34,24 @@
             this.btDelete = new System.Windows.Forms.Button();
             this.btUpdate = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
-            this.txtCGBreedID = new System.Windows.Forms.TextBox();
+            this.txtBGBreedID = new System.Windows.Forms.TextBox();
             this.txtConfinement = new System.Windows.Forms.TextBox();
-            this.txtCGroupID = new System.Windows.Forms.TextBox();
+            this.txtBGroupID = new System.Windows.Forms.TextBox();
             this.txtCFarmID = new System.Windows.Forms.TextBox();
             this.uxChickenBreedID = new System.Windows.Forms.Label();
             this.uxConfinement = new System.Windows.Forms.Label();
             this.uxCFarmID = new System.Windows.Forms.Label();
-            this.uxCGroupID = new System.Windows.Forms.Label();
-            this.uxCGroupMg = new System.Windows.Forms.Label();
+            this.uxBGroupID = new System.Windows.Forms.Label();
+            this.uxBGroupMg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCGroup)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCGroup
             // 
             this.dgvCGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCGroup.Location = new System.Drawing.Point(58, 475);
+            this.dgvCGroup.Location = new System.Drawing.Point(147, 492);
             this.dgvCGroup.Name = "dgvCGroup";
-            this.dgvCGroup.Size = new System.Drawing.Size(612, 135);
+            this.dgvCGroup.Size = new System.Drawing.Size(463, 135);
             this.dgvCGroup.TabIndex = 17;
             // 
             // btLoad
@@ -109,14 +109,14 @@
             this.btAdd.UseVisualStyleBackColor = true;
             this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
-            // txtCGBreedID
+            // txtBGBreedID
             // 
-            this.txtCGBreedID.Location = new System.Drawing.Point(258, 329);
-            this.txtCGBreedID.Multiline = true;
-            this.txtCGBreedID.Name = "txtCGBreedID";
-            this.txtCGBreedID.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtCGBreedID.Size = new System.Drawing.Size(100, 20);
-            this.txtCGBreedID.TabIndex = 27;
+            this.txtBGBreedID.Location = new System.Drawing.Point(258, 329);
+            this.txtBGBreedID.Multiline = true;
+            this.txtBGBreedID.Name = "txtBGBreedID";
+            this.txtBGBreedID.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtBGBreedID.Size = new System.Drawing.Size(100, 20);
+            this.txtBGBreedID.TabIndex = 27;
             // 
             // txtConfinement
             // 
@@ -127,14 +127,14 @@
             this.txtConfinement.Size = new System.Drawing.Size(100, 20);
             this.txtConfinement.TabIndex = 26;
             // 
-            // txtCGroupID
+            // txtBGroupID
             // 
-            this.txtCGroupID.Location = new System.Drawing.Point(258, 161);
-            this.txtCGroupID.Multiline = true;
-            this.txtCGroupID.Name = "txtCGroupID";
-            this.txtCGroupID.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtCGroupID.Size = new System.Drawing.Size(100, 20);
-            this.txtCGroupID.TabIndex = 25;
+            this.txtBGroupID.Location = new System.Drawing.Point(258, 161);
+            this.txtBGroupID.Multiline = true;
+            this.txtBGroupID.Name = "txtBGroupID";
+            this.txtBGroupID.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtBGroupID.Size = new System.Drawing.Size(100, 20);
+            this.txtBGroupID.TabIndex = 25;
             // 
             // txtCFarmID
             // 
@@ -153,7 +153,7 @@
             this.uxChickenBreedID.Name = "uxChickenBreedID";
             this.uxChickenBreedID.Size = new System.Drawing.Size(186, 24);
             this.uxChickenBreedID.TabIndex = 22;
-            this.uxChickenBreedID.Text = "ChickenBreedID";
+            this.uxChickenBreedID.Text = "BirdBreedID";
             this.uxChickenBreedID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // uxConfinement
@@ -178,29 +178,29 @@
             this.uxCFarmID.Text = "FarmID";
             this.uxCFarmID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // uxCGroupID
+            // uxBGroupID
             // 
-            this.uxCGroupID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.uxCGroupID.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.uxCGroupID.Location = new System.Drawing.Point(44, 157);
-            this.uxCGroupID.Name = "uxCGroupID";
-            this.uxCGroupID.Size = new System.Drawing.Size(186, 24);
-            this.uxCGroupID.TabIndex = 19;
-            this.uxCGroupID.Text = "ChickenGroupID";
-            this.uxCGroupID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.uxBGroupID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uxBGroupID.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.uxBGroupID.Location = new System.Drawing.Point(44, 157);
+            this.uxBGroupID.Name = "uxBGroupID";
+            this.uxBGroupID.Size = new System.Drawing.Size(186, 24);
+            this.uxBGroupID.TabIndex = 19;
+            this.uxBGroupID.Text = "BirdGroupID";
+            this.uxBGroupID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // uxCGroupMg
+            // uxBGroupMg
             // 
-            this.uxCGroupMg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.uxCGroupMg.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.uxCGroupMg.Location = new System.Drawing.Point(294, 59);
-            this.uxCGroupMg.Name = "uxCGroupMg";
-            this.uxCGroupMg.Size = new System.Drawing.Size(236, 24);
-            this.uxCGroupMg.TabIndex = 18;
-            this.uxCGroupMg.Text = "Chicken Group Management";
-            this.uxCGroupMg.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.uxBGroupMg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uxBGroupMg.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.uxBGroupMg.Location = new System.Drawing.Point(294, 59);
+            this.uxBGroupMg.Name = "uxBGroupMg";
+            this.uxBGroupMg.Size = new System.Drawing.Size(236, 24);
+            this.uxBGroupMg.TabIndex = 18;
+            this.uxBGroupMg.Text = "Bird Group Management";
+            this.uxBGroupMg.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ChickenGroupForm
+            // BirdGroupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -211,16 +211,16 @@
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.btAdd);
-            this.Controls.Add(this.txtCGBreedID);
+            this.Controls.Add(this.txtBGBreedID);
             this.Controls.Add(this.txtConfinement);
-            this.Controls.Add(this.txtCGroupID);
+            this.Controls.Add(this.txtBGroupID);
             this.Controls.Add(this.txtCFarmID);
             this.Controls.Add(this.uxChickenBreedID);
             this.Controls.Add(this.uxConfinement);
             this.Controls.Add(this.uxCFarmID);
-            this.Controls.Add(this.uxCGroupID);
-            this.Controls.Add(this.uxCGroupMg);
-            this.Name = "ChickenGroupForm";
+            this.Controls.Add(this.uxBGroupID);
+            this.Controls.Add(this.uxBGroupMg);
+            this.Name = "BirdGroupForm";
             this.Text = "ChickenGroupForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCGroup)).EndInit();
             this.ResumeLayout(false);
@@ -236,14 +236,14 @@
         private System.Windows.Forms.Button btDelete;
         private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.Button btAdd;
-        private System.Windows.Forms.TextBox txtCGBreedID;
+        private System.Windows.Forms.TextBox txtBGBreedID;
         private System.Windows.Forms.TextBox txtConfinement;
-        private System.Windows.Forms.TextBox txtCGroupID;
+        private System.Windows.Forms.TextBox txtBGroupID;
         private System.Windows.Forms.TextBox txtCFarmID;
         private System.Windows.Forms.Label uxChickenBreedID;
         private System.Windows.Forms.Label uxConfinement;
         private System.Windows.Forms.Label uxCFarmID;
-        private System.Windows.Forms.Label uxCGroupID;
-        private System.Windows.Forms.Label uxCGroupMg;
+        private System.Windows.Forms.Label uxBGroupID;
+        private System.Windows.Forms.Label uxBGroupMg;
     }
 }

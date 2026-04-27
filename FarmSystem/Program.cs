@@ -16,7 +16,7 @@ namespace FarmForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChickenBreedForm());
+            Application.Run(new FarmForm());
         }
     }
 }

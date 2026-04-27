@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace FarmForm
 {
-    public partial class ChickenBreedForm : Form
+    public partial class BirdBreedForm : Form
     {
 
         SqlConnection connect = new SqlConnection(
            ConfigurationManager.ConnectionStrings["FarmDB"].ConnectionString);
-        public ChickenBreedForm()
+        public BirdBreedForm()
         {
             InitializeComponent();
         }
@@ -39,17 +39,17 @@ namespace FarmForm
 
         private void ClearFields()
         {
-            txtCName.Text = "";
+            txtBName.Text = "";
             txtSpecies.Text = "";
-            txtCBreedID.Text = "";
+            txtBBreedID.Text = "";
 
-            txtCName.Focus();
+            txtBName.Focus();
         }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
 
-            if (txtCName.Text == "" || txtSpecies.Text == "")
+            if (txtBName.Text == "" || txtSpecies.Text == "")
             {
                 MessageBox.Show("Please fill in all fields.");
                 return;
@@ -60,7 +60,7 @@ namespace FarmForm
             SqlCommand checkCmd = new SqlCommand(
                 "SELECT COUNT(*) FROM ChickenBreed WHERE BreedName = @BreedName", connect);
 
-            checkCmd.Parameters.AddWithValue("@BreedName", txtCName.Text);
+            checkCmd.Parameters.AddWithValue("@BreedName", txtBName.Text);
 
             int exists = (int)checkCmd.ExecuteScalar();
 
@@ -74,7 +74,7 @@ namespace FarmForm
             SqlCommand cmd = new SqlCommand(
                 "INSERT INTO ChickenBreed (BreedName, Species) VALUES (@BreedName, @Species)", connect);
 
-            cmd.Parameters.AddWithValue("@BreedName", txtCName.Text);
+            cmd.Parameters.AddWithValue("@BreedName", txtBName.Text);
             cmd.Parameters.AddWithValue("@Species", txtSpecies.Text);
 
             cmd.ExecuteNonQuery();
@@ -88,13 +88,13 @@ namespace FarmForm
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
-            if (txtCBreedID.Text == "")
+            if (txtBBreedID.Text == "")
             {
                 MessageBox.Show("Please select a breed to update.");
                 return;
             }
 
-            if (txtCName.Text == "" || txtSpecies.Text == "")
+            if (txtBName.Text == "" || txtSpecies.Text == "")
             {
                 MessageBox.Show("Please fill in all fields.");
                 return;
@@ -105,8 +105,8 @@ namespace FarmForm
             SqlCommand checkCmd = new SqlCommand(
                 "SELECT COUNT(*) FROM ChickenBreed WHERE BreedName = @BreedName AND ChickenBreedID <> @ChickenBreedID", connect);
 
-            checkCmd.Parameters.AddWithValue("@BreedName", txtCName.Text);
-            checkCmd.Parameters.AddWithValue("@ChickenBreedID", txtCBreedID.Text);
+            checkCmd.Parameters.AddWithValue("@BreedName", txtBName.Text);
+            checkCmd.Parameters.AddWithValue("@ChickenBreedID", txtBBreedID.Text);
 
             int exists = (int)checkCmd.ExecuteScalar();
 
@@ -120,8 +120,8 @@ namespace FarmForm
             SqlCommand cmd = new SqlCommand(
                 "UPDATE ChickenBreed SET BreedName = @BreedName, Species = @Species WHERE ChickenBreedID = @ChickenBreedID", connect);
 
-            cmd.Parameters.AddWithValue("@ChickenBreedID", txtCBreedID.Text);
-            cmd.Parameters.AddWithValue("@BreedName", txtCName.Text);
+            cmd.Parameters.AddWithValue("@ChickenBreedID", txtBBreedID.Text);
+            cmd.Parameters.AddWithValue("@BreedName", txtBName.Text);
             cmd.Parameters.AddWithValue("@Species", txtSpecies.Text);
 
             cmd.ExecuteNonQuery();
@@ -136,7 +136,7 @@ namespace FarmForm
         private void btDelete_Click(object sender, EventArgs e)
         {
 
-            if (txtCBreedID.Text == "")
+            if (txtBBreedID.Text == "")
             {
                 MessageBox.Show("Please select a breed to delete.");
                 return;
@@ -158,7 +158,7 @@ namespace FarmForm
             SqlCommand cmd = new SqlCommand(
                 "DELETE FROM ChickenBreed WHERE ChickenBreedID = @ChickenBreedID", connect);
 
-            cmd.Parameters.AddWithValue("@ChickenBreedID", txtCBreedID.Text);
+            cmd.Parameters.AddWithValue("@ChickenBreedID", txtBBreedID.Text);
 
             cmd.ExecuteNonQuery();
             connect.Close();

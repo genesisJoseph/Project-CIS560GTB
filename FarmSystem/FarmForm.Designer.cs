@@ -217,11 +217,10 @@
             // dgvFarm
             // 
             this.dgvFarm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFarm.Location = new System.Drawing.Point(29, 519);
+            this.dgvFarm.Location = new System.Drawing.Point(115, 499);
             this.dgvFarm.Name = "dgvFarm";
-            this.dgvFarm.Size = new System.Drawing.Size(712, 135);
+            this.dgvFarm.Size = new System.Drawing.Size(562, 135);
             this.dgvFarm.TabIndex = 0;
-           
             // 
             // FarmForm
             // 
