@@ -19,10 +19,10 @@ namespace FarmOfEggs.Data
                 conn.Open();
                 var cmd = new SqlCommand(
                     @"INSERT INTO BatchEgg
-                (ChickenGroupID, Size, DateProduced, BestByDate, Grade, EggColor)
-                VALUES (@ChickenGroupID, @Size, @DateProduced, @BestByDate, @Grade, @EggColor)", conn);
+                (BirdGroupID, Size, DateProduced, BestByDate, Grade, EggColor)
+                VALUES (@BirdGroupID, @Size, @DateProduced, @BestByDate, @Grade, @EggColor)", conn);
 
-                cmd.Parameters.AddWithValue("@ChickenGroupID", egg.ChickenGroupID);
+                cmd.Parameters.AddWithValue("@BirdGroupID", egg.BirdGroupID);
                 cmd.Parameters.AddWithValue("@Size", egg.Size);
                 cmd.Parameters.AddWithValue("@DateProduced", egg.DateProduced);
                 cmd.Parameters.AddWithValue("@BestByDate", egg.BestByDate);
@@ -39,7 +39,7 @@ namespace FarmOfEggs.Data
                 conn.Open();
                 var cmd = new SqlCommand(
                     @"UPDATE BatchEgg SET
-                ChickenGroupID = @ChickenGroupID,
+                BirdGroupID = @BirdGroupID,
                 Size = @Size,
                 DateProduced = @DateProduced,
                 BestByDate = @BestByDate,
@@ -48,7 +48,7 @@ namespace FarmOfEggs.Data
               WHERE BatchEggID = @BatchEggID", conn);
 
                 cmd.Parameters.AddWithValue("@BatchEggID", egg.BatchEggID);
-                cmd.Parameters.AddWithValue("@ChickenGroupID", egg.ChickenGroupID);
+                cmd.Parameters.AddWithValue("@BirdGroupID", egg.BirdGroupID);
                 cmd.Parameters.AddWithValue("@Size", egg.Size);
                 cmd.Parameters.AddWithValue("@DateProduced", egg.DateProduced);
                 cmd.Parameters.AddWithValue("@BestByDate", egg.BestByDate);
@@ -85,7 +85,7 @@ namespace FarmOfEggs.Data
                     list.Add(new BatchEgg
                     {
                         BatchEggID = (int)reader["BatchEggID"],
-                        ChickenGroupID = (int)reader["ChickenGroupID"],
+                        BirdGroupID = (int)reader["ChickenGroupID"],
                         Size = reader["Size"].ToString(),
                         DateProduced = (DateTime)reader["DateProduced"],
                         BestByDate = (DateTime)reader["BestByDate"],

@@ -9,6 +9,7 @@ namespace FarmOfEggs
         public FarmOfEggs()
         {
             InitializeComponent();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -16,7 +17,7 @@ namespace FarmOfEggs
 
             var egg = new BatchEgg
             {
-                ChickenGroupID = int.Parse(ChickenGroupIDTB.Text),
+                BirdGroupID = int.Parse(BirdGroupIDTB.Text),
                 Size = SizeTB.Text,
                 DateProduced = DateProducedDTP.Value,
                 BestByDate = BestByDateDTP.Value,
@@ -40,7 +41,7 @@ namespace FarmOfEggs
             var egg = new BatchEgg
             {
                 BatchEggID = int.Parse(BatchEggIdTB.Text), // add this textbox
-                ChickenGroupID = int.Parse(ChickenGroupIDTB.Text),
+                BirdGroupID = int.Parse(BirdGroupIDTB.Text),
                 Size = SizeTB.Text,
                 DateProduced = DateProducedDTP.Value,
                 BestByDate = BestByDateDTP.Value,

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\timot\\source\\repos\\FarmOfEggs\\FarmOfEggs.csproj": {}
+    "C:\\Users\\timot\\Source\\Repos\\Project-CIS560GTB\\FarmOfEggs\\FarmOfEggs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\timot\\source\\repos\\FarmOfEggs\\FarmOfEggs.csproj": {
+    "C:\\Users\\timot\\Source\\Repos\\Project-CIS560GTB\\FarmOfEggs\\FarmOfEggs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\timot\\source\\repos\\FarmOfEggs\\FarmOfEggs.csproj",
+        "projectUniqueName": "C:\\Users\\timot\\Source\\Repos\\Project-CIS560GTB\\FarmOfEggs\\FarmOfEggs.csproj",
         "projectName": "FarmOfEggs",
-        "projectPath": "C:\\Users\\timot\\source\\repos\\FarmOfEggs\\FarmOfEggs.csproj",
+        "projectPath": "C:\\Users\\timot\\Source\\Repos\\Project-CIS560GTB\\FarmOfEggs\\FarmOfEggs.csproj",
         "packagesPath": "C:\\Users\\timot\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\timot\\source\\repos\\FarmOfEggs\\obj\\",
+        "outputPath": "C:\\Users\\timot\\Source\\Repos\\Project-CIS560GTB\\FarmOfEggs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\timot\\AppData\\Roaming\\NuGet\\NuGet.Config",

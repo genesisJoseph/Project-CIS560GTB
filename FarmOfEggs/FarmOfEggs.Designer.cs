@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ChickenGroupIDTB = new TextBox();
+            BirdGroupIDTB = new TextBox();
             GradeTB = new TextBox();
             SizeTB = new TextBox();
             EggColorTB = new TextBox();
@@ -36,7 +36,7 @@
             BestByDateDTP = new DateTimePicker();
             AddButton = new Button();
             LoadButton = new Button();
-            ChickenGroupIdLabel = new Label();
+            BirdGroupIdLabel = new Label();
             GradeLabel = new Label();
             EggColorLabel = new Label();
             SizeLabel = new Label();
@@ -52,10 +52,10 @@
             // 
             // ChickenGroupIDTB
             // 
-            ChickenGroupIDTB.Location = new Point(101, 55);
-            ChickenGroupIDTB.Name = "ChickenGroupIDTB";
-            ChickenGroupIDTB.Size = new Size(150, 31);
-            ChickenGroupIDTB.TabIndex = 0;
+            BirdGroupIDTB.Location = new Point(101, 55);
+            BirdGroupIDTB.Name = "BirdGroupIDTB";
+            BirdGroupIDTB.Size = new Size(150, 31);
+            BirdGroupIDTB.TabIndex = 0;
             // 
             // GradeTB
             // 
@@ -114,13 +114,13 @@
             // 
             // ChickenGroupIdLabel
             // 
-            ChickenGroupIdLabel.AutoSize = true;
-            ChickenGroupIdLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ChickenGroupIdLabel.Location = new Point(101, 27);
-            ChickenGroupIdLabel.Name = "ChickenGroupIdLabel";
-            ChickenGroupIdLabel.Size = new Size(149, 25);
-            ChickenGroupIdLabel.TabIndex = 8;
-            ChickenGroupIdLabel.Text = "ChickenGroupId";
+            BirdGroupIdLabel.AutoSize = true;
+            BirdGroupIdLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BirdGroupIdLabel.Location = new Point(101, 27);
+            BirdGroupIdLabel.Name = "BirdGroupIdLabel";
+            BirdGroupIdLabel.Size = new Size(149, 25);
+            BirdGroupIdLabel.TabIndex = 8;
+            BirdGroupIdLabel.Text = "BirdGroupId";
             // 
             // GradeLabel
             // 
@@ -174,9 +174,11 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(99, 409);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(524, 314);
             dataGridView1.TabIndex = 14;
@@ -233,7 +235,7 @@
             Controls.Add(SizeLabel);
             Controls.Add(EggColorLabel);
             Controls.Add(GradeLabel);
-            Controls.Add(ChickenGroupIdLabel);
+            Controls.Add(BirdGroupIdLabel);
             Controls.Add(LoadButton);
             Controls.Add(AddButton);
             Controls.Add(BestByDateDTP);
@@ -241,7 +243,7 @@
             Controls.Add(EggColorTB);
             Controls.Add(SizeTB);
             Controls.Add(GradeTB);
-            Controls.Add(ChickenGroupIDTB);
+            Controls.Add(BirdGroupIDTB);
             Name = "FarmOfEggs";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -251,7 +253,7 @@
 
         #endregion
 
-        private TextBox ChickenGroupIDTB;
+        private TextBox BirdGroupIDTB;
         private TextBox GradeTB;
         private TextBox SizeTB;
         private TextBox EggColorTB;
@@ -259,7 +261,7 @@
         private DateTimePicker BestByDateDTP;
         private Button AddButton;
         private Button LoadButton;
-        private Label ChickenGroupIdLabel;
+        private Label BirdGroupIdLabel;
         private Label GradeLabel;
         private Label EggColorLabel;
         private Label SizeLabel;
