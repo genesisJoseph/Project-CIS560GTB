@@ -27,14 +27,14 @@ namespace Forms
         private void button4_Click(object sender, EventArgs e)
         {
             string query = @"
-            INSERT INTO EggSales (UnitPrice, AvgUnit, BatchID, RetailID)
-            VALUES (@UnitPrice, @AvgUnit, @BatchID, @RetailID)";
+            INSERT INTO EggSales (UnitPrice, AvgUnit, BatchEggID, RetailID)
+            VALUES (@UnitPrice, @AvgUnit, @BatchEggID, @RetailID)";
 
             SqlParameter[] parameters = new SqlParameter[]
             {
             new SqlParameter("@UnitPrice", decimal.Parse(textBox1.Text)),
             new SqlParameter("@AvgUnit", int.Parse(textBox2.Text)),
-            new SqlParameter("@BatchID", comboBox2.SelectedValue),
+            new SqlParameter("@BatchEggID", comboBox2.SelectedValue),
             new SqlParameter("@RetailID", comboBox1.SelectedValue)
             };
 
@@ -55,7 +55,7 @@ namespace Forms
             UPDATE EggSales
             SET UnitPrice = @UnitPrice,
                 AvgUnit = @AvgUnit,
-                BatchID = @BatchID,
+                BatchEggID = @BatchEggID,
                 RetailID = @RetailID
             WHERE EggSalesID = @EggSalesID";
 
@@ -81,7 +81,7 @@ namespace Forms
                 EggSalesID,
                 UnitPrice,
                 AvgUnit,
-                BatchID,
+                BatchEggID,
                 RetailID
             FROM EggSales
             WHERE CanceledOn IS NULL";
