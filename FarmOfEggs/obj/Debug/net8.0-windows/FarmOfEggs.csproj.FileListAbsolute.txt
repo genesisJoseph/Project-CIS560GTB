@@ -36,8 +36,6 @@ C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\bin\Debug\net8.0-window
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.csproj.AssemblyReference.cache
-C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.FarmOfEggs.resources
-C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.Forms.BatchEggForm.resources
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.csproj.GenerateResource.cache
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.AssemblyInfoInputs.cache
@@ -50,3 +48,8 @@ C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-window
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.pdb
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.genruntimeconfig.cache
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\ref\FarmOfEggs.dll
+C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.BatchEggForm.resources
+C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmForm.ChickenBreedForm.resources
+C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmForm.ChickenGroupForm.resources
+C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmForm.FarmForm.resources
+C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.Forms.MainForm.resources

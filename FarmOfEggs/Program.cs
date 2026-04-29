@@ -1,3 +1,5 @@
+using FarmOfEggs.Forms;
+
 namespace FarmOfEggs
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace FarmOfEggs
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FarmOfEggs());
+            Application.Run(new MainForm());
         }
     }
 }

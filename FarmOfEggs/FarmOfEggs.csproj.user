@@ -1,10 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="FarmOfEggs.cs">
+    <Compile Update="Forms\ChickenBreedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ChickenGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FarmForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\BatchEggForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
