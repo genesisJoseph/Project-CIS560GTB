@@ -74,7 +74,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.Size = new Size(647, 193);
+            dataGridView1.Size = new Size(647, 407);
             dataGridView1.TabIndex = 0;
             // 
             // RetailTx
@@ -158,7 +158,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 565);
+            ClientSize = new Size(790, 783);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);

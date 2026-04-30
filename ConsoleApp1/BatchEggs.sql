@@ -2,5 +2,5 @@
 GO
 
 CREATE TABLE dbo.BatchEgg (
-    BatchEggID INT PRIMARY KEY,
+    BatchEggID INT IDENTITY(1,1) PRIMARY KEY,
 );

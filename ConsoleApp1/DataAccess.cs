@@ -16,7 +16,19 @@ public class DataAccess
         using (SqlConnection conn = new SqlConnection(_connectionString))
         using (SqlCommand cmd = new SqlCommand(query, conn))
         {
-            cmd.Parameters.AddRange(parameters);
+            if (parameters != null)
+            {
+                foreach (SqlParameter p in parameters)
+                {
+                    if (p.Value == null)
+                    {
+                        p.Value = DBNull.Value;
+                    }
+                }
+
+                cmd.Parameters.AddRange(parameters);
+            }
+
             conn.Open();
             return cmd.ExecuteNonQuery();
         }

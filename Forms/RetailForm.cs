@@ -27,18 +27,26 @@ namespace Forms
             string query = @"
             INSERT INTO Retail (PhoneNumber, Name, RetailFee)
             VALUES (@PhoneNumber, @Name, @RetailFee)";
-
-            SqlParameter[] parameters = new SqlParameter[]
+            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
+            string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
             {
-            new SqlParameter("@PhoneNumber", textBox2.Text),
-            new SqlParameter("@Name", textBox1.Text),
-            new SqlParameter("@RetailFee", decimal.Parse(textBox3.Text))
-            };
+                MessageBox.Show("Please fill in all fields.");
+                return;
+            }
+            else
+            {
+                SqlParameter[] parameters = new SqlParameter[]
+                {
+                new SqlParameter("@PhoneNumber", textBox2.Text),
+                new SqlParameter("@Name", textBox1.Text),
+                new SqlParameter("@RetailFee", decimal.Parse(textBox3.Text))
+                };
 
-            DataAccess db = new DataAccess(connectionString);
-            db.ExecuteNonQuery(query, parameters);
+                DataAccess db = new DataAccess(connectionString);
+                db.ExecuteNonQuery(query, parameters);
 
-            MessageBox.Show("Retail added successfully.");
+                MessageBox.Show("Retail added successfully.");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -49,19 +57,27 @@ namespace Forms
                 Name = @Name,
                 RetailFee = @RetailFee
             WHERE RetailID = @RetailID";
-
+            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
+            string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Please fill in all fields.");
+                return;
+            }
+            else
+            {
                 SqlParameter[] parameters = new SqlParameter[]
-                {
+                    {
             new SqlParameter("@PhoneNumber", textBox2.Text),
             new SqlParameter("@Name", textBox1.Text),
             new SqlParameter("@RetailFee", decimal.Parse(textBox3.Text)),
             new SqlParameter("@RetailID", selectedRetailID)
-                };
+                    };
 
                 DataAccess db = new DataAccess(connectionString);
                 db.ExecuteNonQuery(query, parameters);
 
                 MessageBox.Show("Retail updated.");
+            }
         }
         private void dgvRetail_CellClick(object sender, DataGridViewCellEventArgs e)
         {

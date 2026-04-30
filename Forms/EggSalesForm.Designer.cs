@@ -48,10 +48,10 @@ namespace Forms
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(92, 367);
+            dataGridView1.Location = new Point(53, 361);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.Size = new Size(670, 160);
+            dataGridView1.Size = new Size(709, 342);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -80,7 +80,7 @@ namespace Forms
             button3.Name = "button3";
             button3.Size = new Size(150, 46);
             button3.TabIndex = 4;
-            button3.Text = "Cancle";
+            button3.Text = "Cancel";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -164,7 +164,7 @@ namespace Forms
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 539);
+            ClientSize = new Size(833, 725);
             Controls.Add(button4);
             Controls.Add(textBox2);
             Controls.Add(label4);

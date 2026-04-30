@@ -2,5 +2,5 @@
 Go
 Create Table BatchEgg
 (
-	BatchEggID int Not Null Primary Key,
+	BatchEggID INT IDENTITY(1,1) PRIMARY KEY,
 );
