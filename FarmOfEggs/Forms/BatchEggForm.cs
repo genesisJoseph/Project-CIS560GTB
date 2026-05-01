@@ -81,6 +81,11 @@ namespace FarmOfEggs
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
+            if (BatchEggIdTB.Text == "")
+            {
+                MessageBox.Show("Please select a Egg Batch to delete.");
+                return;
+            }
             var service = new BatchEggService();
             service.Delete(int.Parse(BatchEggIdTB.Text));
             MessageBox.Show("Batch egg deleted successfully.");
