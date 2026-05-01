@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ChickenGroupIDTB = new TextBox();
+            BirdGroupIDTB = new TextBox();
             GradeTB = new TextBox();
             SizeTB = new TextBox();
             EggColorTB = new TextBox();
@@ -36,7 +36,7 @@
             BestByDateDTP = new DateTimePicker();
             AddButton = new Button();
             LoadButton = new Button();
-            ChickenGroupIdLabel = new Label();
+            BirdGroupIdLabel = new Label();
             GradeLabel = new Label();
             EggColorLabel = new Label();
             SizeLabel = new Label();
@@ -48,15 +48,17 @@
             BatchEggIdLabel = new Label();
             BatchEggIdTB = new TextBox();
             uxBreedMg = new Label();
+            quantitylb = new Label();
+            QuantityTB = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // ChickenGroupIDTB
+            // BirdGroupIDTB
             // 
-            ChickenGroupIDTB.Location = new Point(99, 93);
-            ChickenGroupIDTB.Name = "ChickenGroupIDTB";
-            ChickenGroupIDTB.Size = new Size(150, 31);
-            ChickenGroupIDTB.TabIndex = 0;
+            BirdGroupIDTB.Location = new Point(99, 372);
+            BirdGroupIDTB.Name = "BirdGroupIDTB";
+            BirdGroupIDTB.Size = new Size(150, 31);
+            BirdGroupIDTB.TabIndex = 0;
             // 
             // GradeTB
             // 
@@ -113,15 +115,15 @@
             LoadButton.UseVisualStyleBackColor = true;
             LoadButton.Click += LoadButton_Click;
             // 
-            // ChickenGroupIdLabel
+            // BirdGroupIdLabel
             // 
-            ChickenGroupIdLabel.AutoSize = true;
-            ChickenGroupIdLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ChickenGroupIdLabel.Location = new Point(99, 65);
-            ChickenGroupIdLabel.Name = "ChickenGroupIdLabel";
-            ChickenGroupIdLabel.Size = new Size(149, 25);
-            ChickenGroupIdLabel.TabIndex = 8;
-            ChickenGroupIdLabel.Text = "ChickenGroupId";
+            BirdGroupIdLabel.AutoSize = true;
+            BirdGroupIdLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BirdGroupIdLabel.Location = new Point(99, 344);
+            BirdGroupIdLabel.Name = "BirdGroupIdLabel";
+            BirdGroupIdLabel.Size = new Size(117, 25);
+            BirdGroupIdLabel.TabIndex = 8;
+            BirdGroupIdLabel.Text = "BirdGroupId";
             // 
             // GradeLabel
             // 
@@ -208,7 +210,7 @@
             // 
             BatchEggIdLabel.AutoSize = true;
             BatchEggIdLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BatchEggIdLabel.Location = new Point(98, 328);
+            BatchEggIdLabel.Location = new Point(99, 65);
             BatchEggIdLabel.Name = "BatchEggIdLabel";
             BatchEggIdLabel.Size = new Size(110, 25);
             BatchEggIdLabel.TabIndex = 17;
@@ -216,7 +218,7 @@
             // 
             // BatchEggIdTB
             // 
-            BatchEggIdTB.Location = new Point(99, 372);
+            BatchEggIdTB.Location = new Point(99, 93);
             BatchEggIdTB.Name = "BatchEggIdTB";
             BatchEggIdTB.Size = new Size(150, 31);
             BatchEggIdTB.TabIndex = 18;
@@ -233,11 +235,30 @@
             uxBreedMg.Text = "Egg Batch";
             uxBreedMg.TextAlign = ContentAlignment.TopCenter;
             // 
+            // quantitylb
+            // 
+            quantitylb.AutoSize = true;
+            quantitylb.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            quantitylb.Location = new Point(322, 344);
+            quantitylb.Name = "quantitylb";
+            quantitylb.Size = new Size(87, 25);
+            quantitylb.TabIndex = 21;
+            quantitylb.Text = "Quantity";
+            // 
+            // QuantityTB
+            // 
+            QuantityTB.Location = new Point(322, 372);
+            QuantityTB.Name = "QuantityTB";
+            QuantityTB.Size = new Size(150, 31);
+            QuantityTB.TabIndex = 20;
+            // 
             // BatchEggForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(704, 805);
+            Controls.Add(quantitylb);
+            Controls.Add(QuantityTB);
             Controls.Add(uxBreedMg);
             Controls.Add(BatchEggIdTB);
             Controls.Add(BatchEggIdLabel);
@@ -249,7 +270,7 @@
             Controls.Add(SizeLabel);
             Controls.Add(EggColorLabel);
             Controls.Add(GradeLabel);
-            Controls.Add(ChickenGroupIdLabel);
+            Controls.Add(BirdGroupIdLabel);
             Controls.Add(LoadButton);
             Controls.Add(AddButton);
             Controls.Add(BestByDateDTP);
@@ -257,7 +278,7 @@
             Controls.Add(EggColorTB);
             Controls.Add(SizeTB);
             Controls.Add(GradeTB);
-            Controls.Add(ChickenGroupIDTB);
+            Controls.Add(BirdGroupIDTB);
             Name = "BatchEggForm";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -267,7 +288,7 @@
 
         #endregion
 
-        private TextBox ChickenGroupIDTB;
+        private TextBox BirdGroupIDTB;
         private TextBox GradeTB;
         private TextBox SizeTB;
         private TextBox EggColorTB;
@@ -275,7 +296,7 @@
         private DateTimePicker BestByDateDTP;
         private Button AddButton;
         private Button LoadButton;
-        private Label ChickenGroupIdLabel;
+        private Label BirdGroupIdLabel;
         private Label GradeLabel;
         private Label EggColorLabel;
         private Label SizeLabel;
@@ -287,5 +308,7 @@
         private Label BatchEggIdLabel;
         private TextBox BatchEggIdTB;
         private Label uxBreedMg;
+        private Label quantitylb;
+        private TextBox QuantityTB;
     }
 }

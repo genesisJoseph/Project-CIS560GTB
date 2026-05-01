@@ -49,7 +49,7 @@ C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-window
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.genruntimeconfig.cache
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\ref\FarmOfEggs.dll
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.BatchEggForm.resources
-C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmForm.ChickenBreedForm.resources
-C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmForm.ChickenGroupForm.resources
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmForm.FarmForm.resources
 C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmOfEggs.Forms.MainForm.resources
+C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmForm.BirdGroupForm.resources
+C:\Users\timot\Source\Repos\Project-CIS560GTB\FarmOfEggs\obj\Debug\net8.0-windows\FarmForm.BirdBreedForm.resources

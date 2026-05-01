@@ -1,6 +1,6 @@
 ﻿namespace FarmForm
 {
-    partial class ChickenBreedForm
+    partial class BirdBreedForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvChickenBreed = new DataGridView();
+            dgvBirdBreed = new DataGridView();
             btLoad = new Button();
             btDelete = new Button();
             btUpdate = new Button();
@@ -37,21 +37,23 @@
             txtCName = new TextBox();
             txtCBreedID = new TextBox();
             uxSpecies = new Label();
-            uxChickenBreedID = new Label();
+            uxBirdBreedID = new Label();
             uxBName = new Label();
             uxBreedMg = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgvChickenBreed).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBirdBreed).BeginInit();
             SuspendLayout();
             // 
-            // dgvChickenBreed
+            // dgvBirdBreed
             // 
-            dgvChickenBreed.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvChickenBreed.Location = new Point(99, 409);
-            dgvChickenBreed.Margin = new Padding(5, 6, 5, 6);
-            dgvChickenBreed.Name = "dgvChickenBreed";
-            dgvChickenBreed.RowHeadersWidth = 62;
-            dgvChickenBreed.Size = new Size(524, 384);
-            dgvChickenBreed.TabIndex = 33;
+            dgvBirdBreed.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvBirdBreed.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvBirdBreed.Location = new Point(99, 409);
+            dgvBirdBreed.Margin = new Padding(5, 6, 5, 6);
+            dgvBirdBreed.Name = "dgvBirdBreed";
+            dgvBirdBreed.RowHeadersVisible = false;
+            dgvBirdBreed.RowHeadersWidth = 62;
+            dgvBirdBreed.Size = new Size(524, 384);
+            dgvBirdBreed.TabIndex = 33;
             // 
             // btLoad
             // 
@@ -143,17 +145,17 @@
             uxSpecies.Text = "Species";
             uxSpecies.TextAlign = ContentAlignment.TopCenter;
             // 
-            // uxChickenBreedID
+            // uxBirdBreedID
             // 
-            uxChickenBreedID.AutoSize = true;
-            uxChickenBreedID.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            uxChickenBreedID.Location = new Point(99, 65);
-            uxChickenBreedID.Margin = new Padding(5, 0, 5, 0);
-            uxChickenBreedID.Name = "uxChickenBreedID";
-            uxChickenBreedID.Size = new Size(148, 25);
-            uxChickenBreedID.TabIndex = 19;
-            uxChickenBreedID.Text = "ChickenBreedID";
-            uxChickenBreedID.TextAlign = ContentAlignment.TopCenter;
+            uxBirdBreedID.AutoSize = true;
+            uxBirdBreedID.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            uxBirdBreedID.Location = new Point(99, 65);
+            uxBirdBreedID.Margin = new Padding(5, 0, 5, 0);
+            uxBirdBreedID.Name = "uxBirdBreedID";
+            uxBirdBreedID.Size = new Size(116, 25);
+            uxBirdBreedID.TabIndex = 19;
+            uxBirdBreedID.Text = "BirdBreedID";
+            uxBirdBreedID.TextAlign = ContentAlignment.TopCenter;
             // 
             // uxBName
             // 
@@ -175,18 +177,18 @@
             uxBreedMg.Location = new Point(14, 9);
             uxBreedMg.Margin = new Padding(5, 0, 5, 0);
             uxBreedMg.Name = "uxBreedMg";
-            uxBreedMg.Size = new Size(155, 30);
+            uxBreedMg.Size = new Size(120, 30);
             uxBreedMg.TabIndex = 17;
-            uxBreedMg.Text = "Chicken Breed ";
+            uxBreedMg.Text = "Bird Breed ";
             uxBreedMg.TextAlign = ContentAlignment.TopCenter;
             // 
-            // ChickenBreedForm
+            // BirdBreedForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(704, 805);
-            Controls.Add(dgvChickenBreed);
+            Controls.Add(dgvBirdBreed);
             Controls.Add(btLoad);
             Controls.Add(btDelete);
             Controls.Add(btUpdate);
@@ -195,13 +197,13 @@
             Controls.Add(txtCName);
             Controls.Add(txtCBreedID);
             Controls.Add(uxSpecies);
-            Controls.Add(uxChickenBreedID);
+            Controls.Add(uxBirdBreedID);
             Controls.Add(uxBName);
             Controls.Add(uxBreedMg);
             Margin = new Padding(5, 6, 5, 6);
-            Name = "ChickenBreedForm";
+            Name = "BirdBreedForm";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dgvChickenBreed).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBirdBreed).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -209,7 +211,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvChickenBreed;
+        private System.Windows.Forms.DataGridView dgvBirdBreed;
         private System.Windows.Forms.Button btLoad;
         private System.Windows.Forms.Button btDelete;
         private System.Windows.Forms.Button btUpdate;
@@ -218,7 +220,7 @@
         private System.Windows.Forms.TextBox txtCName;
         private System.Windows.Forms.TextBox txtCBreedID;
         private System.Windows.Forms.Label uxSpecies;
-        private System.Windows.Forms.Label uxChickenBreedID;
+        private System.Windows.Forms.Label uxBirdBreedID;
         private System.Windows.Forms.Label uxBName;
         private System.Windows.Forms.Label uxBreedMg;
     }

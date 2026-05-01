@@ -39,14 +39,14 @@ namespace FarmOfEggs.Forms
             ShowFormInPanel(new FarmForm.FarmForm());
         }
 
-        private void ChickenBreedFormButton_Click(object sender, EventArgs e)
+        private void BirdBreedFormButton_Click(object sender, EventArgs e)
         {
-            ShowFormInPanel(new FarmForm.ChickenBreedForm());
+            ShowFormInPanel(new FarmForm.BirdBreedForm());
         }
 
-        private void ChickenGroupFormButton_Click(object sender, EventArgs e)
+        private void BirdGroupFormButton_Click(object sender, EventArgs e)
         {
-            ShowFormInPanel(new FarmForm.ChickenGroupForm());
+            ShowFormInPanel(new FarmForm.BirdGroupForm());
         }
 
         private void BatchEggFormButton_Click(object sender, EventArgs e)

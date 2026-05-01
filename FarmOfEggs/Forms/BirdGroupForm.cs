@@ -12,34 +12,46 @@ using System.Windows.Forms;
 
 namespace FarmForm
 {
-    public partial class ChickenGroupForm : Form
+    public partial class BirdGroupForm : Form
     {
 
         private static string connectionString =
             "Server=(localdb)\\MSSQLLocalDB;Database=FarmOfEggs;Trusted_Connection=True;";
 
         private SqlConnection connect;
-        public ChickenGroupForm()
+        public BirdGroupForm()
         {
             InitializeComponent();
             connect = new SqlConnection(connectionString);
         }
 
 
-        private void LoadChickenGroupData()
+        private void LoadBirdGroupData(int? id = null) // Nullable parameter
         {
             connect.Open();
 
-            SqlDataAdapter dataA = new SqlDataAdapter(
-                "SELECT * FROM ChickenGroup", connect);
+            // Default query
+            string query = "SELECT * FROM BirdGroup";
+
+            // Add filter if an ID is provided
+            if (id.HasValue)
+            {
+                query += " WHERE BirdGroupID = @id";
+            }
+
+            SqlDataAdapter dataA = new SqlDataAdapter(query, connect);
+
+            if (id.HasValue)
+            {
+                dataA.SelectCommand.Parameters.AddWithValue("@id", id.Value);
+            }
 
             DataTable dataT = new DataTable();
             dataA.Fill(dataT);
-
             dgvCGroup.DataSource = dataT;
-
             connect.Close();
         }
+
 
         private void ClearFields()
         {
@@ -53,8 +65,18 @@ namespace FarmForm
 
         private void btLoad_Click(object sender, EventArgs e)
         {
-            LoadChickenGroupData();
+            // Try to turn the text into a number
+            if (int.TryParse(txtCGroupID.Text, out int id))
+            {
+                LoadBirdGroupData(id);
+            }
+            else
+            {
+                // If the user typed something invalid, just load everything or show a message                
+                LoadBirdGroupData();
+            }
         }
+
 
         private void btAdd_Click(object sender, EventArgs e)
         {
@@ -80,31 +102,31 @@ namespace FarmForm
             }
 
             SqlCommand checkBreed = new SqlCommand(
-                "SELECT COUNT(*) FROM ChickenBreed WHERE ChickenBreedID = @ChickenBreedID", connect);
-            checkBreed.Parameters.AddWithValue("@ChickenBreedID", txtCGBreedID.Text);
+                "SELECT COUNT(*) FROM BirdBreed WHERE BirdBreedID = @BirdBreedID", connect);
+            checkBreed.Parameters.AddWithValue("@BirdBreedID", txtCGBreedID.Text);
 
             int breedExists = (int)checkBreed.ExecuteScalar();
 
             if (breedExists == 0)
             {
-                MessageBox.Show("ChickenBreedID does not exist.");
+                MessageBox.Show("BirdBreedID does not exist.");
                 connect.Close();
                 return;
             }
 
             SqlCommand cmd = new SqlCommand(
-                "INSERT INTO ChickenGroup (Confinement, FarmID, ChickenBreedID) VALUES (@Confinement, @FarmID, @ChickenBreedID)", connect);
+                "INSERT INTO BirdGroup (Confinement, FarmID, BirdBreedID) VALUES (@Confinement, @FarmID, @BirdBreedID)", connect);
 
             cmd.Parameters.AddWithValue("@Confinement", txtConfinement.Text);
             cmd.Parameters.AddWithValue("@FarmID", txtCFarmID.Text);
-            cmd.Parameters.AddWithValue("@ChickenBreedID", txtCGBreedID.Text);
+            cmd.Parameters.AddWithValue("@BirdBreedID", txtCGBreedID.Text);
 
             cmd.ExecuteNonQuery();
             connect.Close();
 
-            MessageBox.Show("Chicken group added successfully.");
+            MessageBox.Show("Bird group added successfully.");
 
-            LoadChickenGroupData();
+            LoadBirdGroupData();
             ClearFields();
         }
 
@@ -112,7 +134,7 @@ namespace FarmForm
         {
             if (txtCGroupID.Text == "")
             {
-                MessageBox.Show("Please select a chicken group to update.");
+                MessageBox.Show("Please select a bird group to update.");
                 return;
             }
 
@@ -125,19 +147,19 @@ namespace FarmForm
             connect.Open();
 
             SqlCommand cmd = new SqlCommand(
-                "UPDATE ChickenGroup SET Confinement = @Confinement, FarmID = @FarmID, ChickenBreedID = @ChickenBreedID WHERE ChickenGroupID = @ChickenGroupID", connect);
+                "UPDATE BirdGroup SET Confinement = @Confinement, FarmID = @FarmID, BirdBreedID = @BirdBreedID WHERE BirdGroupID = @BirdGroupID", connect);
 
-            cmd.Parameters.AddWithValue("@ChickenGroupID", txtCGroupID.Text);
+            cmd.Parameters.AddWithValue("@BirdGroupID", txtCGroupID.Text);
             cmd.Parameters.AddWithValue("@Confinement", txtConfinement.Text);
             cmd.Parameters.AddWithValue("@FarmID", txtCFarmID.Text);
-            cmd.Parameters.AddWithValue("@ChickenBreedID", txtCGBreedID.Text);
+            cmd.Parameters.AddWithValue("@BirdBreedID", txtCGBreedID.Text);
 
             cmd.ExecuteNonQuery();
             connect.Close();
 
-            MessageBox.Show("Chicken group updated successfully.");
+            MessageBox.Show("Bird group updated successfully.");
 
-            LoadChickenGroupData();
+            LoadBirdGroupData();
             ClearFields();
         }
 
@@ -145,12 +167,12 @@ namespace FarmForm
         {
             if (txtCGroupID.Text == "")
             {
-                MessageBox.Show("Please select a chicken group to delete.");
+                MessageBox.Show("Please select a bird group to delete.");
                 return;
             }
 
             DialogResult result = MessageBox.Show(
-                "Are you sure you want to delete this chicken group?",
+                "Are you sure you want to delete this bird group?",
                 "Confirm Delete",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning);
@@ -163,16 +185,16 @@ namespace FarmForm
             connect.Open();
 
             SqlCommand cmd = new SqlCommand(
-                "DELETE FROM ChickenGroup WHERE ChickenGroupID = @ChickenGroupID", connect);
+                "DELETE FROM BirdGroup WHERE BirdGroupID = @BirdGroupID", connect);
 
-            cmd.Parameters.AddWithValue("@ChickenGroupID", txtCGroupID.Text);
+            cmd.Parameters.AddWithValue("@BirdGroupID", txtCGroupID.Text);
 
             cmd.ExecuteNonQuery();
             connect.Close();
 
-            MessageBox.Show("Chicken group deleted successfully.");
+            MessageBox.Show("Bird group deleted successfully.");
 
-            LoadChickenGroupData();
+            LoadBirdGroupData();
             ClearFields();
         }
 

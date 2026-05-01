@@ -1,6 +1,6 @@
 ﻿namespace FarmForm
 {
-    partial class ChickenGroupForm
+    partial class BirdGroupForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             dgvCGroup = new DataGridView();
             btLoad = new Button();
             btDelete = new Button();
@@ -40,7 +40,7 @@
             txtConfinement = new TextBox();
             txtCGroupID = new TextBox();
             txtCFarmID = new TextBox();
-            uxChickenBreedID = new Label();
+            uxBirdBreedID = new Label();
             uxConfinement = new Label();
             uxCFarmID = new Label();
             uxCGroupID = new Label();
@@ -50,34 +50,36 @@
             // 
             // dgvCGroup
             // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvCGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvCGroup.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvCGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvCGroup.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvCGroup.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgvCGroup.DefaultCellStyle = dataGridViewCellStyle5;
             dgvCGroup.Location = new Point(99, 409);
             dgvCGroup.Margin = new Padding(5, 6, 5, 6);
             dgvCGroup.Name = "dgvCGroup";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvCGroup.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvCGroup.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dgvCGroup.RowHeadersVisible = false;
             dgvCGroup.RowHeadersWidth = 62;
             dgvCGroup.Size = new Size(524, 384);
             dgvCGroup.TabIndex = 17;
@@ -170,17 +172,17 @@
             txtCFarmID.Size = new Size(150, 31);
             txtCFarmID.TabIndex = 24;
             // 
-            // uxChickenBreedID
+            // uxBirdBreedID
             // 
-            uxChickenBreedID.AutoSize = true;
-            uxChickenBreedID.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            uxChickenBreedID.Location = new Point(98, 266);
-            uxChickenBreedID.Margin = new Padding(5, 0, 5, 0);
-            uxChickenBreedID.Name = "uxChickenBreedID";
-            uxChickenBreedID.Size = new Size(148, 25);
-            uxChickenBreedID.TabIndex = 22;
-            uxChickenBreedID.Text = "ChickenBreedID";
-            uxChickenBreedID.TextAlign = ContentAlignment.TopCenter;
+            uxBirdBreedID.AutoSize = true;
+            uxBirdBreedID.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            uxBirdBreedID.Location = new Point(98, 266);
+            uxBirdBreedID.Margin = new Padding(5, 0, 5, 0);
+            uxBirdBreedID.Name = "uxBirdBreedID";
+            uxBirdBreedID.Size = new Size(116, 25);
+            uxBirdBreedID.TabIndex = 22;
+            uxBirdBreedID.Text = "BirdBreedID";
+            uxBirdBreedID.TextAlign = ContentAlignment.TopCenter;
             // 
             // uxConfinement
             // 
@@ -213,9 +215,9 @@
             uxCGroupID.Location = new Point(99, 65);
             uxCGroupID.Margin = new Padding(5, 0, 5, 0);
             uxCGroupID.Name = "uxCGroupID";
-            uxCGroupID.Size = new Size(151, 25);
+            uxCGroupID.Size = new Size(119, 25);
             uxCGroupID.TabIndex = 19;
-            uxCGroupID.Text = "ChickenGroupID";
+            uxCGroupID.Text = "BirdGroupID";
             uxCGroupID.TextAlign = ContentAlignment.TopCenter;
             // 
             // uxCGroupMg
@@ -225,12 +227,12 @@
             uxCGroupMg.Location = new Point(14, 9);
             uxCGroupMg.Margin = new Padding(5, 0, 5, 0);
             uxCGroupMg.Name = "uxCGroupMg";
-            uxCGroupMg.Size = new Size(150, 28);
+            uxCGroupMg.Size = new Size(115, 28);
             uxCGroupMg.TabIndex = 18;
-            uxCGroupMg.Text = "Chicken Group";
+            uxCGroupMg.Text = "Bird Group";
             uxCGroupMg.TextAlign = ContentAlignment.TopCenter;
             // 
-            // ChickenGroupForm
+            // BirdGroupForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -244,15 +246,15 @@
             Controls.Add(txtConfinement);
             Controls.Add(txtCGroupID);
             Controls.Add(txtCFarmID);
-            Controls.Add(uxChickenBreedID);
+            Controls.Add(uxBirdBreedID);
             Controls.Add(uxConfinement);
             Controls.Add(uxCFarmID);
             Controls.Add(uxCGroupID);
             Controls.Add(uxCGroupMg);
             Font = new Font("Segoe UI", 9F);
             Margin = new Padding(5, 6, 5, 6);
-            Name = "ChickenGroupForm";
-            Text = "ChickenGroupForm";
+            Name = "BirdGroupForm";
+            Text = "BirdGroupForm";
             ((System.ComponentModel.ISupportInitialize)dgvCGroup).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -270,7 +272,7 @@
         private System.Windows.Forms.TextBox txtConfinement;
         private System.Windows.Forms.TextBox txtCGroupID;
         private System.Windows.Forms.TextBox txtCFarmID;
-        private System.Windows.Forms.Label uxChickenBreedID;
+        private System.Windows.Forms.Label uxBirdBreedID;
         private System.Windows.Forms.Label uxConfinement;
         private System.Windows.Forms.Label uxCFarmID;
         private System.Windows.Forms.Label uxCGroupID;

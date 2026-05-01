@@ -12,33 +12,42 @@ using System.Windows.Forms;
 
 namespace FarmForm
 {
-    public partial class ChickenBreedForm : Form
+    public partial class BirdBreedForm : Form
     {
         private static string connectionString =
             "Server=(localdb)\\MSSQLLocalDB;Database=FarmOfEggs;Trusted_Connection=True;";
 
         private SqlConnection connect;
 
-        public ChickenBreedForm()
+        public BirdBreedForm()
         {
             InitializeComponent();
             connect = new SqlConnection(connectionString);
         }
 
-        private void LoadChickenBreedData()
+        private void LoadBirdBreedData(int? id = null)
         {
             connect.Open();
+            string query = "SELECT * FROM BirdBreed";
 
-            SqlDataAdapter dataA = new SqlDataAdapter(
-                "SELECT * FROM ChickenBreed", connect);
+            if (id.HasValue)
+            {
+                query += " WHERE BirdBreedID = @id";
+            }
+
+            SqlDataAdapter dataA = new SqlDataAdapter(query, connect);
+
+            if (id.HasValue)
+            {
+                dataA.SelectCommand.Parameters.AddWithValue("@id", id.Value);
+            }
 
             DataTable dataT = new DataTable();
             dataA.Fill(dataT);
-
-            dgvChickenBreed.DataSource = dataT;
-
+            dgvBirdBreed.DataSource = dataT;
             connect.Close();
         }
+
 
         private void ClearFields()
         {
@@ -61,7 +70,7 @@ namespace FarmForm
             connect.Open();
 
             SqlCommand checkCmd = new SqlCommand(
-                "SELECT COUNT(*) FROM ChickenBreed WHERE BreedName = @BreedName", connect);
+                "SELECT COUNT(*) FROM BirdBreed WHERE BreedName = @BreedName", connect);
 
             checkCmd.Parameters.AddWithValue("@BreedName", txtCName.Text);
 
@@ -75,7 +84,7 @@ namespace FarmForm
             }
 
             SqlCommand cmd = new SqlCommand(
-                "INSERT INTO ChickenBreed (BreedName, Species) VALUES (@BreedName, @Species)", connect);
+                "INSERT INTO BirdBreed (BreedName, Species) VALUES (@BreedName, @Species)", connect);
 
             cmd.Parameters.AddWithValue("@BreedName", txtCName.Text);
             cmd.Parameters.AddWithValue("@Species", txtSpecies.Text);
@@ -83,9 +92,9 @@ namespace FarmForm
             cmd.ExecuteNonQuery();
             connect.Close();
 
-            MessageBox.Show("Chicken breed added successfully.");
+            MessageBox.Show("Bird breed added successfully.");
 
-            LoadChickenBreedData();
+            LoadBirdBreedData();
             ClearFields();
         }
 
@@ -106,10 +115,10 @@ namespace FarmForm
             connect.Open();
 
             SqlCommand checkCmd = new SqlCommand(
-                "SELECT COUNT(*) FROM ChickenBreed WHERE BreedName = @BreedName AND ChickenBreedID <> @ChickenBreedID", connect);
+                "SELECT COUNT(*) FROM BirdBreed WHERE BreedName = @BreedName AND BirdBreedID <> @BirdBreedID", connect);
 
             checkCmd.Parameters.AddWithValue("@BreedName", txtCName.Text);
-            checkCmd.Parameters.AddWithValue("@ChickenBreedID", txtCBreedID.Text);
+            checkCmd.Parameters.AddWithValue("@BirdBreedID", txtCBreedID.Text);
 
             int exists = (int)checkCmd.ExecuteScalar();
 
@@ -121,18 +130,18 @@ namespace FarmForm
             }
 
             SqlCommand cmd = new SqlCommand(
-                "UPDATE ChickenBreed SET BreedName = @BreedName, Species = @Species WHERE ChickenBreedID = @ChickenBreedID", connect);
+                "UPDATE BirdBreed SET BreedName = @BreedName, Species = @Species WHERE BirdBreedID = @BirdBreedID", connect);
 
-            cmd.Parameters.AddWithValue("@ChickenBreedID", txtCBreedID.Text);
+            cmd.Parameters.AddWithValue("@BirdBreedID", txtCBreedID.Text);
             cmd.Parameters.AddWithValue("@BreedName", txtCName.Text);
             cmd.Parameters.AddWithValue("@Species", txtSpecies.Text);
 
             cmd.ExecuteNonQuery();
             connect.Close();
 
-            MessageBox.Show("Chicken breed updated successfully.");
+            MessageBox.Show("Bird breed updated successfully.");
 
-            LoadChickenBreedData();
+            LoadBirdBreedData();
             ClearFields();
         }
 
@@ -159,16 +168,16 @@ namespace FarmForm
             connect.Open();
 
             SqlCommand cmd = new SqlCommand(
-                "DELETE FROM ChickenBreed WHERE ChickenBreedID = @ChickenBreedID", connect);
+                "DELETE FROM BirdBreed WHERE BirdBreedID = @BirdBreedID", connect);
 
-            cmd.Parameters.AddWithValue("@ChickenBreedID", txtCBreedID.Text);
+            cmd.Parameters.AddWithValue("@BirdBreedID", txtCBreedID.Text);
 
             cmd.ExecuteNonQuery();
             connect.Close();
 
-            MessageBox.Show("Chicken breed deleted successfully.");
+            MessageBox.Show("Bird breed deleted successfully.");
 
-            LoadChickenBreedData();
+            LoadBirdBreedData();
             ClearFields();
         }
 
@@ -179,7 +188,17 @@ namespace FarmForm
 
         private void btLoad_Click(object sender, EventArgs e)
         {
-            LoadChickenBreedData();
+            // If the textbox has a valid number, filter by it. 
+            // If it's empty or invalid, load all rows.
+            if (int.TryParse(txtCBreedID.Text, out int id))
+            {
+                LoadBirdBreedData(id);
+            }
+            else
+            {
+                LoadBirdBreedData();
+            }
         }
+
     }
 }

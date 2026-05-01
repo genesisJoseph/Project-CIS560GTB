@@ -24,20 +24,29 @@ namespace FarmForm
             connect = new SqlConnection(connectionString);
         }
 
-        private void LoadFarmData()
+        private void LoadFarmData(int? id = null)
         {
             connect.Open();
+            string query = "SELECT * FROM Farm";
 
-            SqlDataAdapter dataA = new SqlDataAdapter(
-                "SELECT * FROM Farm", connect);
+            if (id.HasValue)
+            {
+                query += " WHERE FarmID = @id";
+            }
+
+            SqlDataAdapter dataA = new SqlDataAdapter(query, connect);
+
+            if (id.HasValue)
+            {
+                dataA.SelectCommand.Parameters.AddWithValue("@id", id.Value);
+            }
 
             DataTable dataT = new DataTable();
             dataA.Fill(dataT);
-
             dgvFarm.DataSource = dataT;
-
             connect.Close();
         }
+
 
         private void ClearFields()
         {
@@ -49,8 +58,17 @@ namespace FarmForm
 
         private void btLoad_Click(object sender, EventArgs e)
         {
-            LoadFarmData();
+            // If a valid ID is entered, filter; otherwise, load all farms.
+            if (int.TryParse(txtFarmID.Text, out int id))
+            {
+                LoadFarmData(id);
+            }
+            else
+            {
+                LoadFarmData();
+            }
         }
+
 
         private void btAdd_Click(object sender, EventArgs e)
         {

@@ -10,7 +10,7 @@ namespace FarmOfEggs.Data
     public class DataAccess
     {
         private string connectionString =
-            "Server=(localdb)\\MSSQLLocalDB;Database=FarmOfEggsDB;Trusted_Connection=True;";
+            "Server=(localdb)\\MSSQLLocalDB;Database=FarmOfEggs;Trusted_Connection=True;";
 
         public SqlConnection GetConnection()
         {

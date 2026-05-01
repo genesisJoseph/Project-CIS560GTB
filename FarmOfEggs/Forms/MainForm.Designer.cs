@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             FarmFormButton = new Button();
-            ChickenGroupFormButton = new Button();
+            BirdGroupFormButton = new Button();
             RetailFormButton = new Button();
             BatchEggFormButton = new Button();
-            ChickenBreedFormButton = new Button();
+            BirdBreedFormButton = new Button();
             mainPanel = new Panel();
             SaleFormButton = new Button();
             SuspendLayout();
@@ -48,16 +48,16 @@
             FarmFormButton.UseVisualStyleBackColor = true;
             FarmFormButton.Click += FarmFormButton_Click;
             // 
-            // ChickenGroupFormButton
+            // BirdGroupFormButton
             // 
-            ChickenGroupFormButton.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
-            ChickenGroupFormButton.Location = new Point(221, 117);
-            ChickenGroupFormButton.Name = "ChickenGroupFormButton";
-            ChickenGroupFormButton.Size = new Size(153, 58);
-            ChickenGroupFormButton.TabIndex = 1;
-            ChickenGroupFormButton.Text = "ChickenGroup";
-            ChickenGroupFormButton.UseVisualStyleBackColor = true;
-            ChickenGroupFormButton.Click += ChickenGroupFormButton_Click;
+            BirdGroupFormButton.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            BirdGroupFormButton.Location = new Point(221, 117);
+            BirdGroupFormButton.Name = "BirdGroupFormButton";
+            BirdGroupFormButton.Size = new Size(153, 58);
+            BirdGroupFormButton.TabIndex = 1;
+            BirdGroupFormButton.Text = "Bird Group";
+            BirdGroupFormButton.UseVisualStyleBackColor = true;
+            BirdGroupFormButton.Click += BirdGroupFormButton_Click;
             // 
             // RetailFormButton
             // 
@@ -76,26 +76,26 @@
             BatchEggFormButton.Name = "BatchEggFormButton";
             BatchEggFormButton.Size = new Size(153, 58);
             BatchEggFormButton.TabIndex = 3;
-            BatchEggFormButton.Text = "EggBatch";
+            BatchEggFormButton.Text = "Egg Batch";
             BatchEggFormButton.UseVisualStyleBackColor = true;
             BatchEggFormButton.Click += BatchEggFormButton_Click;
             // 
-            // ChickenBreedFormButton
+            // BirdBreedFormButton
             // 
-            ChickenBreedFormButton.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
-            ChickenBreedFormButton.Location = new Point(655, 33);
-            ChickenBreedFormButton.Name = "ChickenBreedFormButton";
-            ChickenBreedFormButton.Size = new Size(153, 58);
-            ChickenBreedFormButton.TabIndex = 4;
-            ChickenBreedFormButton.Text = "ChickenBreed";
-            ChickenBreedFormButton.UseVisualStyleBackColor = true;
-            ChickenBreedFormButton.Click += ChickenBreedFormButton_Click;
+            BirdBreedFormButton.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            BirdBreedFormButton.Location = new Point(655, 33);
+            BirdBreedFormButton.Name = "BirdBreedFormButton";
+            BirdBreedFormButton.Size = new Size(153, 58);
+            BirdBreedFormButton.TabIndex = 4;
+            BirdBreedFormButton.Text = "Bird Breed";
+            BirdBreedFormButton.UseVisualStyleBackColor = true;
+            BirdBreedFormButton.Click += BirdBreedFormButton_Click;
             // 
             // mainPanel
             // 
             mainPanel.Location = new Point(148, 264);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(800, 739);
+            mainPanel.Size = new Size(800, 894);
             mainPanel.TabIndex = 5;
             // 
             // SaleFormButton
@@ -112,13 +112,13 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1068, 1015);
+            ClientSize = new Size(1068, 1195);
             Controls.Add(SaleFormButton);
             Controls.Add(mainPanel);
-            Controls.Add(ChickenBreedFormButton);
+            Controls.Add(BirdBreedFormButton);
             Controls.Add(BatchEggFormButton);
             Controls.Add(RetailFormButton);
-            Controls.Add(ChickenGroupFormButton);
+            Controls.Add(BirdGroupFormButton);
             Controls.Add(FarmFormButton);
             Name = "MainForm";
             Text = "Application";
@@ -128,10 +128,10 @@
         #endregion
 
         private Button FarmFormButton;
-        private Button ChickenGroupFormButton;
+        private Button BirdGroupFormButton;
         private Button RetailFormButton;
         private Button BatchEggFormButton;
-        private Button ChickenBreedFormButton;
+        private Button BirdBreedFormButton;
         private Panel mainPanel;
         private Button SaleFormButton;
     }
