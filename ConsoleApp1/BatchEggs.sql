@@ -1,0 +1,6 @@
+﻿USE Farm;
+GO
+
+CREATE TABLE dbo.BatchEgg (
+    BatchEggID INT IDENTITY(1,1) PRIMARY KEY,
+);
