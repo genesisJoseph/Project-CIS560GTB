@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using FarmForm;
+﻿using Forms;
 
 namespace FarmOfEggs.Forms
 {
@@ -52,6 +43,16 @@ namespace FarmOfEggs.Forms
         private void BatchEggFormButton_Click(object sender, EventArgs e)
         {
             ShowFormInPanel(new BatchEggForm());
+        }
+
+        private void SaleFormButton_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new EggSalesForm());
+        }
+
+        private void RetailFormButton_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new RetailForm());
         }
     }
 }

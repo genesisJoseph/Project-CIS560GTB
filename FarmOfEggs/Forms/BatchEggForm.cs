@@ -10,6 +10,7 @@ namespace FarmOfEggs
         {
             InitializeComponent();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+           dataGridView1.DataSource = new BatchEggService().GetAll();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {

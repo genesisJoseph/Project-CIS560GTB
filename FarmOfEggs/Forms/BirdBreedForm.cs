@@ -23,6 +23,7 @@ namespace FarmForm
         {
             InitializeComponent();
             connect = new SqlConnection(connectionString);
+            LoadBirdBreedData();
         }
 
         private void LoadBirdBreedData(int? id = null)

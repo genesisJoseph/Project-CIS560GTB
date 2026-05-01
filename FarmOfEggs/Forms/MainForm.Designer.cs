@@ -68,6 +68,7 @@
             RetailFormButton.TabIndex = 2;
             RetailFormButton.Text = "Retail";
             RetailFormButton.UseVisualStyleBackColor = true;
+            RetailFormButton.Click += RetailFormButton_Click;
             // 
             // BatchEggFormButton
             // 
@@ -107,6 +108,7 @@
             SaleFormButton.TabIndex = 6;
             SaleFormButton.Text = "Sales";
             SaleFormButton.UseVisualStyleBackColor = true;
+            SaleFormButton.Click += SaleFormButton_Click;
             // 
             // MainForm
             // 
