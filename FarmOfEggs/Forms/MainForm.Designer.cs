@@ -35,6 +35,7 @@
             BirdBreedFormButton = new Button();
             mainPanel = new Panel();
             SaleFormButton = new Button();
+            ReportsFormButton = new Button();
             SuspendLayout();
             // 
             // FarmFormButton
@@ -110,11 +111,23 @@
             SaleFormButton.UseVisualStyleBackColor = true;
             SaleFormButton.Click += SaleFormButton_Click;
             // 
+            // ReportsFormButton
+            // 
+            ReportsFormButton.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            ReportsFormButton.Location = new Point(436, 117);
+            ReportsFormButton.Name = "ReportsFormButton";
+            ReportsFormButton.Size = new Size(153, 58);
+            ReportsFormButton.TabIndex = 7;
+            ReportsFormButton.Text = "Reports Form";
+            ReportsFormButton.UseVisualStyleBackColor = true;
+            ReportsFormButton.Click += ReportsFormButton_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1068, 1195);
+            Controls.Add(ReportsFormButton);
             Controls.Add(SaleFormButton);
             Controls.Add(mainPanel);
             Controls.Add(BirdBreedFormButton);
@@ -136,5 +149,6 @@
         private Button BirdBreedFormButton;
         private Panel mainPanel;
         private Button SaleFormButton;
+        private Button ReportsFormButton;
     }
 }

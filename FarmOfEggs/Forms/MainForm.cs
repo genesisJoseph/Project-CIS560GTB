@@ -54,5 +54,10 @@ namespace FarmOfEggs.Forms
         {
             ShowFormInPanel(new RetailForm());
         }
+
+        private void ReportsFormButton_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new ReportsForm());
+        }
     }
 }
